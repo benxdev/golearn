@@ -16,5 +16,5 @@ func main() {
 	fmt.Print("Enter Num 2: ")
 	fmt.Scanf("%d\n", &num2)
 	var prod, sum int = mathFunc(num1, num2) 
-	fmt.Printf("prod: %d\n sum: %d", prod, sum)
+	fmt.Printf("prod: %d sum: %d\n", prod, sum)
 }
