@@ -1,17 +1,21 @@
-package main 
-import "fmt"
+package main
+import (
+	"fmt"
+)
 
-const MAX = 100
-func getPoint(x int, y int) (int,int) {
-	return x, y
+type messageToSend struct {
+	message string
+	sender user
+	recepient user
 }
-func main() {
+type user struct {
+	name string
+	number int
+}
+func canSendmessage(mToSend, messageToSend) bool {
+	return true
+}
 
-	if 69 < 0 {
-		x, _ := getPoint(3, 5)
-		fmt.Println(x)
-	} else {
-		fmt.Println("not required")
-	}
-	
+func main() {
+	fmt.Print()
 }
