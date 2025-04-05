@@ -2,20 +2,26 @@ package main
 import (
 	"fmt"
 )
+//anonymus structs in go
 
-type messageToSend struct {
-	message string
-	sender user
-	recepient user
-}
-type user struct {
+type man struct {
 	name string
-	number int
+	age int
+	race string
+ 
 }
-func canSendmessage(mToSend, messageToSend) bool {
-	return true
+
+type oneman man struct {
+	name = "Ejike"
+	age = 45
+	race = "nigger"
 }
 
 func main() {
-	fmt.Print()
+	var newUser user
+
+	newUser.name = "EJIKE\n"
+	newUser.number = 9809800
+
+	fmt.Print(newUser.name, newUser.number)
 }
