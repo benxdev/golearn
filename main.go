@@ -1,9 +1,22 @@
-package main 
+package main
+
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 func main() {
-	fmt.Printf("Hello, %s\n", os.Args[2])
+    var sum float64
+	var n int 
+	
+	for {
+		var val float64
+		_, err := fmt.Fscanln(os.Stdin, &val)
+		if  err != nil {
+			break
+   		} 
+
+		sum += val
+		n++
+	}
 }
