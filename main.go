@@ -15,8 +15,11 @@ func main() {
 		if  err != nil {
 			break
    		} 
-
 		sum += val
 		n++
 	}
-}
+
+	if n == 0 {
+		fmt.Fprintln(os.Stderr, "no values")
+	}
+} 
