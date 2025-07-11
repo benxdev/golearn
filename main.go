@@ -1,25 +1,12 @@
 package main
 
 import (
-    "fmt"
-    "os"
+	"fmt"
 )
 
 func main() {
-    var sum float64
-	var n int 
-	
-	for {
-		var val float64
-		_, err := fmt.Fscanln(os.Stdin, &val)
-		if  err != nil {
-			break
-   		} 
-		sum += val
-		n++
+	x := 5
+	if x > 3 {
+		fmt.Println("x is greater than 3")
 	}
-
-	if n == 0 {
-		fmt.Fprintln(os.Stderr, "no values")
-	}
-} 
+}
