@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	x := 5
-	if x > 3 {
-		fmt.Println("x is greater than 3")
-	}
+	x := "first string"
+	z := 46
+	fmt.Println("ff\t \t")
+	fmt.Printf("%v is a strint while %v is an integer", x, z)
 }
