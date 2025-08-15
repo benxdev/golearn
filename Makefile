@@ -10,4 +10,4 @@ build: vet
 	go build
 
 clean: 
-	go clean
+	go clean	
