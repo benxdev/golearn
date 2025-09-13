@@ -2,23 +2,14 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
-const TestDigit = 69
+var x int = 344
 
-func main(){
-
-	var b byte 			= 255
-	var smallI int32 	= 2147483647
-	var bigI uint64 	= 18446744073709551615
-
-	b += 1
-	smallI += 1
-	bigI += 1
-
-	fmt.Println(b, smallI, bigI)
-	var bigNum uint64 = math.MaxUint64
-	fmt.Println(bigNum)
+func main() {
+	var x = make([]int, 5, 50)
+	x = append(x, 67)
+	x[10] = 69
+	fmt.Println(x, len(x), cap(x))
 
 }
