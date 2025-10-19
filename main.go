@@ -3,16 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	x := make([]string, 0, 5)
-	x = append(x, "a", "b", "c", "d")
-	y := x[:2]	// y = a,b
-	z := x[2:]	// z = c,d
-	fmt.Println(cap(x), cap(y), cap(z))	// cap of x,y,z = 5
-	y = append(y, "i", "j", "k") // 
-	x = append(x, "x")
-	z = append(z, "y")
-	fmt.Println("x:", x)
-	fmt.Println("y:", y)
-	fmt.Println("z:", z)
-
+	x := []int{1, 2, 3, 4, 5}
+	y := make([]int, 2)
+	copy(y, x[3:])
+	fmt.Println("y = ", y)
 }
