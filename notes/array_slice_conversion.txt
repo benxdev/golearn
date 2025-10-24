@@ -1,0 +1,14 @@
+* 24/10/2025
+- converting arrays to slices:
+    slice := array[:]
+    slice := array[:2]
+    (taking a slice from an array has the same memory sharing properties as taking a slice from a slice).
+
+- converting slices to arrays
+    using type conversion:
+    array := [length]int(slice)
+    (the memory is not shared in the case. changes to slice won't affect array and vice versa).
+    
+    - converting a slice to an array pointer
+    arrayPointer := (*[length]int)(slice)
+    (the memory is now shared in this case).
