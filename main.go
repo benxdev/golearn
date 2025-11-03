@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	)
+ 
+var c = true
 
 func main() {
-	var x int = 44
-	var y = string(x)
-	fmt.Println(y)
+	
+	fmt.Println(c)
 }
