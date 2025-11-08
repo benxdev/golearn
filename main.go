@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	)
- 
-var c = true
+)
 
 func main() {
-	var a int32 = 56
-	var b int64 = 56
-	var c = a + b
-	a = b
-	fmt.Println(c)
+	oddsArr := [10]int{3, 9, 69, 55, 4565, 656, 68, 898, 658, 12}
+	fmt.Println(oddsArr)
+
+	oddsSlc := oddsArr[1:(len(oddsArr)-2)]
+
+	fmt.Printf("Length: %d, Value: %v, Type: %T", len(oddsSlc), oddsSlc, oddsSlc)
 }
