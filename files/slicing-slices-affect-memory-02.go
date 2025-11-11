@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	x := make([]string, 0, 5)
+	x := make([]string, 0, 5)			// make() is used to initialize Reference types only (Channels, Maps, Slices, ...)
 	x = append(x, "a", "b", "c", "d")
 	y := x[:2]                          // y = a,b
 	z := x[2:]                          // z = c,d
