@@ -5,9 +5,11 @@ import (
 )
 
 func main() {	
-	var s []int
-	p := &s
-	fmt.Printf("%v", *p)
+	var nums []int
+	for i := 0; i < 5000; i++ {
+		nums = append(nums, i)
+		fmt.Printf("Length=%d, Capacity=%d\n", len(nums), cap(nums))
+	}
 }
 
 
