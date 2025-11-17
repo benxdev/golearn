@@ -56,14 +56,3 @@ func main() {
 	fmt.Printf("value of PI = %v\n", m4["PI"])
 
 }
-
-// names := []string{
-// 	"John",
-// 	"Okafor",
-// 	"Ibekwe",
-// 	"Merlin",
-// 	"Paul",
-// 	"Juggernaut",
-// 	"Heathrow",
-// 	"Presbitarian",
-// }
