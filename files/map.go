@@ -51,7 +51,7 @@ func main() {
 	fmt.Printf("%v\n", m3["girl"])
 
 	m4 := map[string]float64 {
-		"PI": 3.14,
+		"PI": PI,
 	}
 	fmt.Printf("value of PI = %v\n", m4["PI"])
 
