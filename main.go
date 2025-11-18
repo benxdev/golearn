@@ -1,14 +1,12 @@
 package main
-
 import (
 	"fmt"
 )
+
 var PI float64 = 3.14
-
 type Race struct {
-	Race, Nationality  string
+	Race, Nationality string
 }
-
 var st = []string{
 	"John",
 	"Okafor",
@@ -23,24 +21,23 @@ var st = []string{
 	"Liquidity",
 }
 
-var i int = 4
-var j int = 65 
+func factory() func(x int) int {
+	n := 23
 
-var f00 = func(i int, st []string)(int, string) {
-	return i, st[5]
-}
-
-var f01 = func(j int, PI float64)(int, int) {
-	shortPI := int(PI)
-	return j, shortPI
-}
-
-var f = func(func(int, []string)(int, string), func(int, float64)(int, int)) (int, string, int) {
-	_, shortPI := f01(j, PI)
-	return i + j, st[5], shortPI
+	return func (x int)int {
+		n = n + x
+		return n
+	}
 }
 
 func main() {
-	fmt.Println(f(f00, f01))
-}
+	newFac := factory()
+	anoFac := factory()
 
+	fmt.Println(newFac(7))
+	fmt.Println(anoFac(4-7))
+	fmt.Println(newFac(7))
+	fmt.Println(anoFac(4*7))
+	fmt.Println(newFac(7))
+	fmt.Println(anoFac(4*7))
+}
