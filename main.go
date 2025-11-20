@@ -20,20 +20,11 @@ var st = []string{
 	"Odogwu Bitters",
 	"Liquidity",
 }
-
-func createFibSequence(first, second int) func() int {
-	a, b := first, second
-	return func() int {
-		result := a
-		a, b = b, a+b
-		return result
-	}
-}
-
+	func (r Race) mthd()string {
+		return "I speak fucking Chinese!"
+	} 
+	
 func main() {
-	fib := createFibSequence(17, 23)
-	for i := 0; i < 20; i++ {
-		fmt.Println(fib())
-	}
-
+	nr := Race{"Asian", "Chinese"}
+	fmt.Println(nr.mthd())
 }
