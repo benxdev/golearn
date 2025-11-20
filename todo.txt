@@ -1,0 +1,3 @@
+write a program that makes a slice of slices [][]int, 3 x 3 matrix; 
+apply methods to change the positions of a particular element in the matrix.
+methods should be able to achieve simply by call based on their convient position based names.

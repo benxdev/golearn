@@ -1,12 +1,9 @@
 package main
+
 import (
 	"fmt"
 )
 
-var PI float64 = 3.14
-type Race struct {
-	Race, Nationality string
-}
 var st = []string{
 	"John",
 	"Okafor",
@@ -20,11 +17,26 @@ var st = []string{
 	"Odogwu Bitters",
 	"Liquidity",
 }
-	func (r Race) mthd()string {
-		return "I speak fucking Chinese!"
-	} 
-	
+
+type I interface {
+
+}
+
+type myList struct {
+	Names []string
+}
+
+
+func (m *myList.Names) doIt(c []string) {
+	m = &myList.Names
+	for i:=0; i<5; i++ {
+		fmt.Println(m)
+	}
+}
+
 func main() {
-	nr := Race{"Asian", "Chinese"}
-	fmt.Println(nr.mthd())
+	 list :=  myList {st}
+	var i I = 
+	c := &myList{st}
+
 }
