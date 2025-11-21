@@ -19,7 +19,7 @@ var st = []string{
 }
 
 type I interface {
-
+	doIt() []string
 }
 
 type myList struct {
