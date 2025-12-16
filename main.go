@@ -2,27 +2,25 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
-func pString(c string) {
-	fmt.Printf("this input is a %T type", c)
+type Counter struct {
+	total int
+	lastUpdated time.Time
 }
-func pInt(c int) {
-	fmt.Printf("this input is a %T type", c)
+
+func (c *Counter) increment() {
+	c.total++
+	c.lastUpdated = time.Now()
+}
+func (c Counter) String() string {
+	return fmt.Sprintf("total: %d, last updated: %v", c.total, c.lastUpdated)
 }
 
 func main() {
-	var i interface{}
-	fmt.Scan(&i)
-
-	switch v := i.(type) {
-	case string:
-		pString(v)
-	case int:
-		pInt(v)
-	default:
-		fmt.Print("invalid input type!")
-	// 	s, ok := i.(int16)
-	// 	fmt.Println(s, ok)
-	}
+	var ctr *Counter
+	fmt.Println(ctr.String())
+	ctr.increment()
+	fmt.Println(ctr.String())
 }
