@@ -22,5 +22,5 @@ func main() {
 	var ctr Counter
 	fmt.Println(ctr.String())
 	ctr.increment()
-	fmt.Println(ctr.String())
+	fmt.Println("new ting: ", ctr.String())
 }
