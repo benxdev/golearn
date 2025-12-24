@@ -19,7 +19,7 @@ func (c Counter) String() string {
 }
 
 func main() {
-	var ctr *Counter
+	var ctr Counter
 	fmt.Println(ctr.String())
 	ctr.increment()
 	fmt.Println(ctr.String())

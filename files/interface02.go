@@ -17,7 +17,7 @@ func (p Person) fullNamer() {
 	fmt.Scanln(&p.FirstName)
 	fmt.Print("lastname = ")
 	fmt.Scanln(&p.LastName)
-	fmt.Print("fullname = " + p.FirstName + " " + p.LastName) 
+	fmt.Println("fullname = " + p.FirstName + " " + p.LastName) 
 }
 
 func main() {
